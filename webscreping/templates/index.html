@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block content %}
+    Name: <input ng-model="name" id="inputval" name="name">
+    <!-- <h2 ng-bind="name"></h2> -->
+    {% verbatim %}
+        <p>{{name}}</p>
+        <a href="a/?data={{ name }}"><button>send</button></a>
+    {% endverbatim %}
+{% endblock %}
